@@ -10,7 +10,7 @@ class NotesApp {
 
   generateHTMLlist() {
     var html = "<ul>"
-    for (var i = 0; i <= this.notes.length - 1; i++) {
+    for (var i = 0; i < this.notes.length; i++) {
       html += this.notes[i].generatehtml()
     }
     html += "</ul>"

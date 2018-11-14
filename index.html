@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <script src="./src/note.js"></script>
   <script src="./src/notesapp.js"></script>
+  <script src="./src/helpers.js"></script>
 </head>
 
-<body>
-  <div id="notes_list">
+<body onload="createBasics()">
+  <h1> Notes </h1> <br>
 
-  </div>
+  <input type="text" id="textbox" placeholder="Enter your deepest darkest secrets" style="width: 300px; height: 200px;">
+  <button type="button" id="submit" onclick="App.addnote(document.getElementById('textbox').value)">Submit</button>
+
+  <div id="notes_list"></div>
 
 </body>
 </html>
