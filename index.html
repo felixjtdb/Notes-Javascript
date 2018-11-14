@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="stylesheet.css">
-  <script src="./src/note.js"></script>
-  <script src="./src/notesapp.js"></script>
-  <script src="./src/helpers.js"></script>
 </head>
 
 <body onload="createBasics()">
   <h1> Notes </h1> <br>
 
   <textarea type="text" id="textbox" placeholder="Enter your deepest darkest secrets"></textarea>
-  <a id="submit"><button type="button">Submit</button></a>
+  <br><button id="submit" type="button">Submit</button>
 
   <div id="notes_list"></div>
 
+  <script src="./src/note.js"></script>
+  <script src="./src/notJQuery.js"></script>
+  <script src="./src/notesapp.js"></script>
+  <script src="./src/helpers.js"></script>
 </body>
 </html>
