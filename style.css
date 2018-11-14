@@ -1,0 +1,10 @@
+#textbox{
+  width:200px;
+  height:200px;
+  border:solid 1px;
+  word-wrap: break-word;
+}
+
+/* p{
+white-space: pre-line;
+} */

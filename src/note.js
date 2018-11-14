@@ -1,6 +1,7 @@
 class Note {
-  constructor(text) {
+  constructor(text, id) {
     this.text = text
+    this.id = id
   }
 
   getText() {
@@ -11,6 +12,6 @@ class Note {
   }
 
   generatehtml() {
-    return `<li> ${this.preview()} </li>`
+    return `<a id="${this.id}" href="" onclick=""> ${this.preview()}</a>`
   }
 }
