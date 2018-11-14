@@ -19,3 +19,5 @@ class NotesApp {
     document.getElementById("notes_list").innerHTML = html
   }
 }
+
+App = new NotesApp

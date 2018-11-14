@@ -12,6 +12,6 @@ class Note {
   }
 
   generatehtml() {
-    return `<a id="${this.id}" href="" onclick=""> ${this.preview()}</a>`
+    return `<a onclick="generate_note_html('${this.text}')"> ${this.preview()}</a>`
   }
 }
