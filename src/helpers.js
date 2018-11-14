@@ -2,13 +2,13 @@ function generate(note) {
   document.getElementById("notes_list").innerHTML = html
 }
 
-function toggle_not_view(boolean) {
+function toggle_note_view(boolean) {
   if (boolean) {
     var style1 = "none"
-    var style2 = "block"
+    var style2 = "inline"
   } else {
     var style2 = "none"
-    var style1 = "block"
+    var style1 = "inline"
   }
   document.getElementById("textbox").style.display = style1
   document.getElementById("submit").style.display = style1
@@ -18,6 +18,6 @@ function toggle_not_view(boolean) {
 }
 
 function generate_note_html(note) {
-  toggle_not_view(true)
+  toggle_note_view(true)
   document.getElementById("meaty_note").innerHTML = note
 }
