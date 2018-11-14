@@ -13,3 +13,9 @@ function creating_note_saves_to_array() {
 }
 
 creating_note_saves_to_array()
+
+function adding_note_changes_page() {
+  app.addnote("please contain me")
+  page = window.document.body.innerHTML
+  expect(page).toContain("please contain me")
+}
