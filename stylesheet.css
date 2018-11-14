@@ -1,0 +1,7 @@
+#textbox {
+  width: 300px;
+  height: 200px;
+  column-count: 40;
+  rows: 5;
+  padding: 10px;
+}
