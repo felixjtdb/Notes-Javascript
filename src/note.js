@@ -9,4 +9,8 @@ class Note {
   preview() {
     return this.text.slice(0,20) + "...";
   }
+
+  generatehtml() {
+    return `<li> ${this.preview()} </li>`
+  }
 }
