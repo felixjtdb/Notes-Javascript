@@ -3,5 +3,5 @@ var textarea = document.getElementById('textbox')
 
 submit.addEventListener('click', function() {
   App.addnote(document.getElementById('textbox').value);
-  textarea.value("");
+  textarea.value = "";
 })
