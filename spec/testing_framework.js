@@ -31,7 +31,7 @@ var assert = {
   toContain: function(something) {
     var toBeTested = this._toBeTested
     if (!toBeTested.includes(something)) {
-      var text = "Assertion failed: " + toBeTested + " is not includes to " + something;
+      var text = "Assertion failed: expectation does not include " + something;
       this._addToHTML(text, "failed");
     } else {
       this._addToHTML("Passed equal test", "passed");
@@ -58,6 +58,16 @@ var assert = {
 function expect(toBeTested) {
   assert.addToBeTested(toBeTested);
   return assert;
+}
+
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
 }
 
 var page = window.document.body.innerHTML;
