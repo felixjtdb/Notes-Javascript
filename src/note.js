@@ -1,16 +1,19 @@
 class Note {
-  constructor(text) {
+  constructor(text, id) {
     this.text = text
+    this.id = id
   }
 
-  getText() {
-    return this.text
-  }
   preview() {
     return this.text.slice(0,20) + "...";
   }
 
-  generatehtml() {
-    return `<li> ${this.preview()} </li>`
+  generate_list_item() {
+    var anchor = document.createElement("a")
+    var text = document.createTextNode(this.preview())
+    anchor.setAttribute("href", `#note_id=${this.id}`)
+    anchor.setAttribute("id", this.id)
+    anchor.appendChild(text)
+    return anchor
   }
 }
