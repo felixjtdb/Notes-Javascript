@@ -4,14 +4,16 @@ class Note {
     this.id = id
   }
 
-  getText() {
-    return this.text
-  }
   preview() {
     return this.text.slice(0,20) + "...";
   }
 
-  generatehtml() {
-    return `<a onclick="generate_note_html('${this.text}')"> ${this.preview()}</a>`
+  generate_list_item() {
+    var anchor = document.createElement("a")
+    var text = document.createTextNode(this.preview())
+    anchor.setAttribute("href", `#note_id=${this.id}`)
+    anchor.setAttribute("id", this.id)
+    anchor.appendChild(text)
+    return anchor
   }
 }

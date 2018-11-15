@@ -2,23 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <script src="./src/note.js"></script>
-  <script src="./src/notesapp.js"></script>
-  <script src="./src/helpers.js"></script>
+  <script src="src/note.js"></script>
+  <script src="src/notesapp.js"></script>
+  <script src="src/helpers.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
   <h1> Notes </h1> <br>
+  <div id="writing_view">
+    <input type="text" id="textbox" class="textbox" placeholder="Enter your deepest darkest secrets"><br>
+    <button type="button" id="submit">Submit</button>
+    <ul id="notes_list"> </ul>
+  </div>
 
-  <input type="text" id="textbox" class="textbox" placeholder="Enter your deepest darkest secrets">
-  <button type="button" id="submit" onclick="App.addnote(document.getElementById('textbox').value)">Submit</button>
-
-  <div id="notes_list"></div>
-  <div id="meaty_note"> </div>
-  <button type="button" id="back_button" onclick="toggle_note_view(false)">Back</button>
-
+  <div id="meaty_note">
+    <button type="button" id="back_button" href="/"> Back </button>
+  </div>
 
   <script> toggle_note_view(false) </script>
+  <script src="src/notJQuery.js"></script>
 </body>
-</html>
